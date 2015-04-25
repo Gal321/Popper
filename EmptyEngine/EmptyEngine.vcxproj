@@ -11,22 +11,32 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EE_AllEntities.h" />
+    <ClInclude Include="EE_AllComponents.h" />
+    <ClInclude Include="EE_BasicGUI - DEP.h" />
+    <ClInclude Include="EE_BaseComponent.h" />
     <ClInclude Include="EE_Base.h" />
-    <ClInclude Include="EE_BasicGUI.h" />
+    <ClInclude Include="EE_Entity.h" />
     <ClInclude Include="EE_Exceptions.h" />
-    <ClInclude Include="EE_GraphicEntities.h" />
+    <ClInclude Include="EE_GraphicEntities - DEP.h" />
+    <ClInclude Include="EE_GraphicsComponent.h" />
     <ClInclude Include="EE_Input.h" />
-    <ClInclude Include="EE_MainClass.h" />
+    <ClInclude Include="EE_Engine.h" />
+    <ClInclude Include="EE_RectComponent.h" />
     <ClInclude Include="EE_Strings.h" />
     <ClInclude Include="EmptyEngine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EE_BasicGUI - DEP.cpp" />
+    <ClCompile Include="EE_BaseComponent.cpp" />
+    <ClCompile Include="EE_Entity.cpp" />
     <ClCompile Include="EE_Exceptions.cpp" />
+    <ClCompile Include="EE_GraphicEntities - DEP.cpp" />
+    <ClCompile Include="EE_GraphicsComponent.cpp" />
+    <ClCompile Include="EE_RectComponent.cpp" />
     <ClCompile Include="EE_Strings.cpp" />
-    <ClCompile Include="EmptyEngine.cpp" />
-    <ClCompile Include="EE_GraphicEntities.cpp" />
+    <ClCompile Include="EE_Engine.cpp" />
     <ClCompile Include="EE_Input.cpp" />
-    <ClCompile Include="EE_BasicGUI.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{16705FF2-A61D-4C78-88D2-6C5D1DDD43DC}</ProjectGuid>

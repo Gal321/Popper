@@ -5,6 +5,13 @@
 *                                                                 *
 ******************************************************************/
 
+#ifdef _DEBUG
+#include <cstdio>
+#define DEBUG_PRINT(...) fprintf(stderr, __VA_ARGS__) 
+#else
+#define DEBUG_PRINT(x) (do {} while (0))
+#endif
+
 #define DEFAULT_FONT "../Res/SourceSansPro-Light.ttf"
 #define DEFAULT_WIDTH 450
 #define DEFAULT_HEIGHT 150

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Graphics">
-      <UniqueIdentifier>{dd956e30-db0f-4854-b742-949770e9502a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Controls">
       <UniqueIdentifier>{2e4168b0-7e40-4191-90c7-7ee009ea6ff8}</UniqueIdentifier>
     </Filter>
@@ -24,9 +21,6 @@
     </Filter>
     <Filter Include="Header Files\Controls">
       <UniqueIdentifier>{b4d938af-5621-4bb6-946d-127130a6504b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Graphics">
-      <UniqueIdentifier>{995b4164-b7a1-4a9a-bbd6-171eb0ac2e34}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Misc.">
       <UniqueIdentifier>{b0b881cf-aed0-4b1e-9188-f7e75d9bd9ce}</UniqueIdentifier>
@@ -37,22 +31,31 @@
     <Filter Include="Source Files\Utility">
       <UniqueIdentifier>{292fe039-dd44-4b42-950f-275c5e2835e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{f4a74c1c-d12a-45f1-8fc6-dc80392b383a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities\Components">
+      <UniqueIdentifier>{20df6c80-6a2c-4908-871f-db0e0328dbc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{b1c644f8-880c-4c63-bd60-d95ab7a6b6a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities\Components">
+      <UniqueIdentifier>{5d4a4180-a98c-4695-a450-f08450b620ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics - DEP">
+      <UniqueIdentifier>{995b4164-b7a1-4a9a-bbd6-171eb0ac2e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics - DEP">
+      <UniqueIdentifier>{dd956e30-db0f-4854-b742-949770e9502a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EmptyEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EE_MainClass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EE_Input.h">
       <Filter>Header Files\Controls</Filter>
-    </ClInclude>
-    <ClInclude Include="EE_BasicGUI.h">
-      <Filter>Header Files\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="EE_GraphicEntities.h">
-      <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="EE_Base.h">
       <Filter>Header Files\Misc.</Filter>
@@ -63,25 +66,64 @@
     <ClInclude Include="EE_Exceptions.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="EE_BasicGUI - DEP.h">
+      <Filter>Header Files\Graphics - DEP</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_GraphicEntities - DEP.h">
+      <Filter>Header Files\Graphics - DEP</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_Entity.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_GraphicsComponent.h">
+      <Filter>Header Files\Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_RectComponent.h">
+      <Filter>Header Files\Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_AllComponents.h">
+      <Filter>Header Files\Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_AllEntities.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_BaseComponent.h">
+      <Filter>Header Files\Entities\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EmptyEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EE_Input.cpp">
       <Filter>Source Files\Controls</Filter>
-    </ClCompile>
-    <ClCompile Include="EE_GraphicEntities.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="EE_BasicGUI.cpp">
-      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="EE_Strings.cpp">
       <Filter>Source Files\Utility</Filter>
     </ClCompile>
     <ClCompile Include="EE_Exceptions.cpp">
       <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_BasicGUI - DEP.cpp">
+      <Filter>Source Files\Graphics - DEP</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_GraphicEntities - DEP.cpp">
+      <Filter>Source Files\Graphics - DEP</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_GraphicsComponent.cpp">
+      <Filter>Source Files\Entities\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_RectComponent.cpp">
+      <Filter>Source Files\Entities\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_BaseComponent.cpp">
+      <Filter>Source Files\Entities\Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

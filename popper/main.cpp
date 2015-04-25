@@ -5,13 +5,11 @@ int main(int argc, char* args[])
 	App game;
 	int GlobalClock = 0;
 
-	if (game.GetEngine().Initialize())
+	game.GetEngine().Initialize();
+	while (game.GetEngine().GetState() != EE::Engine::QUIT)
 	{
-		while (game.GetEngine().EngineState != 1)
-		{
-			game.Update(GlobalClock);
-			game.GetEngine().ERender();
-		}
+		game.Update(GlobalClock);
+		game.GetEngine().Render();
 	}
 
 	return 0;
@@ -34,7 +32,7 @@ void App::Update(int Ticks)
 		this->isPopperUp = false;
 	}
 
-	engine.EUpdate(Ticks);
+	engine.Update(Ticks);
 }
 
 App::App():

@@ -5,6 +5,7 @@
 *                                                                 *
 ******************************************************************/
 
+#include "EE_Base.h"
 #include <exception>
 #include <string>
 
@@ -26,12 +27,13 @@ namespace EE
 		virtual const std::string toString() = 0;
 	};
 
-	class NetworkError : public GenericError
+	class SDLError : public GenericError
 	{
 	public:
-		NetworkError(int code = -1);
+		SDLError();
 		virtual const std::string toString();
 	private:
-		int code;
+		std::string sdlErrorString;
 	};
+
 }

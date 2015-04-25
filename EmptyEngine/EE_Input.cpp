@@ -1,5 +1,5 @@
 #include "EE_Input.h"
-#include "EE_BasicGUI.h"
+//#include "EE_BasicGUI.h"
 
 EE::Input::Input():
 	lastKey(0),
