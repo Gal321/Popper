@@ -9,7 +9,7 @@
 #include <cstdio>
 #define DEBUG_PRINT(...) fprintf(stderr, __VA_ARGS__) 
 #else
-#define DEBUG_PRINT(x) (do {} while (0))
+#define DEBUG_PRINT(...) (1)
 #endif
 
 #define DEFAULT_FONT "../Res/SourceSansPro-Light.ttf"

@@ -1,8 +1,8 @@
 #include "EE_Entity.h"
 
-EE::Entity::Entity(Engine & owner,
-	               std::string name)
-	: owner(owner)
+EE::Entity::Entity(Engine *owner,
+	               std::string name):
+	owner(owner)
 {
 }
 
@@ -10,7 +10,7 @@ EE::Entity::~Entity()
 {
 }
 
-void EE::Entity::AddComponent(std::shared_ptr<BaseComponent> component)
+void EE::Entity::AddComponent(std::shared_ptr<Components::BaseComponent> component)
 {
 	// try to bind component to this entity
 	// if bind failed exception should be raised by component,

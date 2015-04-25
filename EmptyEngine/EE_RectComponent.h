@@ -9,7 +9,7 @@
 
 namespace EE
 {
-	namespace PIG
+	namespace Components
 	{
 		class Rect : public Graphics
 		{

@@ -7,11 +7,12 @@
 ******************************************************************/
 
 #include "EE_Base.h"
-#include "EE_Entity.h"
 
 namespace EE 
 {
-	namespace PIG
+	class Entity;
+
+	namespace Components
 	{
 		class BaseComponent
 		{

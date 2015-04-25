@@ -96,7 +96,7 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalOptions>/IGNORE:4221,4006 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalLibraryDirectories>E:\dev\dep\SDL2-2.0.0\lib\$(PlatformTarget);E:\dev\dep\SDL2_ttf-2.0.12\lib\$(PlatformTarget);E:\dev\dep\SDL2_image-2.0.0\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\dev\dep\SDL2-2.0.3\lib\$(PlatformTarget);E:\dev\dep\SDL2_ttf-2.0.12\lib\$(PlatformTarget);E:\dev\dep\SDL2_image-2.0.0\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib</AdditionalDependencies>
     </Lib>
     <PreLinkEvent>
@@ -133,7 +133,7 @@
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalOptions>/IGNORE:4221,4006 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalLibraryDirectories>E:\dev\dep\SDL2-2.0.0\lib\$(PlatformTarget);E:\dev\dep\SDL2_ttf-2.0.12\lib\$(PlatformTarget);E:\dev\dep\SDL2_image-2.0.0\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\dev\dep\SDL2-2.0.3\lib\$(PlatformTarget);E:\dev\dep\SDL2_ttf-2.0.12\lib\$(PlatformTarget);E:\dev\dep\SDL2_image-2.0.0\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib</AdditionalDependencies>
     </Lib>
     <PreLinkEvent>

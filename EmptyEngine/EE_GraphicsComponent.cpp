@@ -1,10 +1,10 @@
 #include "EE_GraphicsComponent.h"
 
-EE::PIG::Graphics::Graphics(Size size,
+EE::Components::Graphics::Graphics(Size size,
 								   Point position,
-								   bool isVisible,
-								   Uint8 alpha)
-	: BaseComponent(),
+								   Uint8 alpha,
+								   bool isVisible):
+	BaseComponent(),
 	size(size),
 	position(position),
 	isVisible(isVisible),
@@ -13,12 +13,12 @@ EE::PIG::Graphics::Graphics(Size size,
 {
 }
 
-EE::PIG::Graphics::~Graphics()
+EE::Components::Graphics::~Graphics()
 {
 	this->Uninitialize();
 }
 
-void EE::PIG::Graphics::Bind(Entity * owner)
+void EE::Components::Graphics::Bind(Entity * owner)
 {
 	// binding to owner entity
 	this->BaseComponent::Bind(owner);
@@ -27,7 +27,7 @@ void EE::PIG::Graphics::Bind(Entity * owner)
 	this->Initialize();
 }
 
-void EE::PIG::Graphics::SetTextureAlpha(Uint8 newAlpha)
+void EE::Components::Graphics::SetTextureAlpha(Uint8 newAlpha)
 {
 	if (this->texture)
 	{
@@ -36,7 +36,7 @@ void EE::PIG::Graphics::SetTextureAlpha(Uint8 newAlpha)
 	}
 }
 
-Uint8 EE::PIG::Graphics::GetTextureAlpha()
+Uint8 EE::Components::Graphics::GetTextureAlpha()
 {
 	return this->textureAlpha;
 }

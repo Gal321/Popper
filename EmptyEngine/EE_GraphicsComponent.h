@@ -13,15 +13,15 @@
 
 namespace EE
 {
-	namespace PIG
+	namespace Components
 	{
 		class Graphics : public BaseComponent
 		{
 		public:
 			Graphics(Size size = Size::Get(),
 				     Point position = Point::Get(),
-					 bool isVisible = true,
-					 Uint8 alpha = 0xFF);
+					 Uint8 alpha = 0xFF,
+					 bool isVisible = true);
 			virtual ~Graphics();
 
 			virtual void Bind(Entity * owner);

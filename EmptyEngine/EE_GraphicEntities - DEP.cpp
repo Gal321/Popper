@@ -1,5 +1,5 @@
 #include <SDL_image.h>
-#include "EE_GraphicEntities.h"
+#include "EE_GraphicEntities - DEP.h"
 #include "EE_Strings.h"
 
 EE::GraphicEntity::GraphicEntity(std::shared_ptr<EE::Engine> container,

@@ -1,19 +1,21 @@
 #include "EE_RectComponent.h"
+#include "EE_Exceptions.h"
+#include "EE_Entity.h"
 
-EE::PIG::Rect::Rect(
-	Uint8 red,
-	Uint8 green,
-	Uint8 blue,
-	Uint8 alpha,
-	Size size,
-	Point position)
-	: Graphics(size, position, alpha),
+EE::Components::Rect::Rect(
+						Uint8 red,
+						Uint8 green,
+						Uint8 blue,
+						Uint8 alpha,
+						Size size,
+						Point position):
+	Graphics(size, position, alpha),
 	color({ red, green, blue, alpha }),
 	sdlSurface(nullptr)
 {
 }
 
-void EE::PIG::Rect::setColor(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)
+void EE::Components::Rect::setColor(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)
 {
 	this->color.r = red;
 	this->color.g = green;
@@ -21,10 +23,10 @@ void EE::PIG::Rect::setColor(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)
 	this->color.a = alpha;
 }
 
-void EE::PIG::Rect::Initialize()
+void EE::Components::Rect::Initialize()
 {
-	SDL_SetRenderDrawBlendMode(this->owner->owner.GetRenderer(), SDL_BLENDMODE_BLEND);
-	this->sdlSurface = SDL_GetWindowSurface(this->owner->owner.GetWindow());
+	SDL_SetRenderDrawBlendMode(this->owner->owner->GetRenderer(), SDL_BLENDMODE_BLEND);
+	this->sdlSurface = SDL_GetWindowSurface(this->owner->owner->GetWindow());
 
 	if (this->sdlSurface == nullptr)
 	{
@@ -33,24 +35,25 @@ void EE::PIG::Rect::Initialize()
 	}
 }
 
-void EE::PIG::Rect::Update(int ticks)
+void EE::Components::Rect::Update(int ticks)
 {
+	(ticks);
 	// Its just a rect...
 }
 
-void EE::PIG::Rect::Render()
+void EE::Components::Rect::Render()
 {
 	SDL_Rect rect{ this->position.x, this->position.y, this->size.width, this->size.height };
 	SDL_Color temp = { 0, 0, 0, 0 };
 
 	// changing render color to ours, rendering and then restoring it
-	SDL_GetRenderDrawColor(this->owner->owner.GetRenderer(), &temp.r, &temp.g, &temp.b, &temp.a);
-	SDL_SetRenderDrawColor(this->owner->owner.GetRenderer(), this->color.r, this->color.g, this->color.b, this->color.a);
-	SDL_RenderFillRect(this->owner->owner.GetRenderer(), &rect);
-	SDL_SetRenderDrawColor(this->owner->owner.GetRenderer(), temp.r, temp.g, temp.b, temp.a);
+	SDL_GetRenderDrawColor(this->owner->owner->GetRenderer(), &temp.r, &temp.g, &temp.b, &temp.a);
+	SDL_SetRenderDrawColor(this->owner->owner->GetRenderer(), this->color.r, this->color.g, this->color.b, this->color.a);
+	SDL_RenderFillRect(this->owner->owner->GetRenderer(), &rect);
+	SDL_SetRenderDrawColor(this->owner->owner->GetRenderer(), temp.r, temp.g, temp.b, temp.a);
 }
 
-void EE::PIG::Rect::Uninitialize()
+void EE::Components::Rect::Uninitialize()
 {
 	if (this->sdlSurface)
 	{

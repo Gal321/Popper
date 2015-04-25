@@ -2,7 +2,7 @@
 /******************************************************************
 *                                                                 *
 * EE_Entity.h - Declares and defines the basic entity skeleton,   *
-*               that should be used with PIG.              *
+*               that should be used with Components.              *
 *                                                                 *
 ******************************************************************/
 
@@ -15,22 +15,19 @@
 
 namespace EE 
 {
-	using namespace EE::PIG;
-
 	class Entity
 	{
 	public:
-		Entity(EE::Engine & owner,
-			   std::string name = "N/A");
+		Entity(Engine *owner, std::string name = "N/A");
 		virtual ~Entity();
 
-		void AddComponent(std::shared_ptr<BaseComponent> component);
+		void AddComponent(std::shared_ptr<Components::BaseComponent> component);
 		virtual void Update(int ticks);
 
-		Engine & owner;
+		Engine *owner;
 
 	protected:
-		std::list<std::shared_ptr<BaseComponent>> componentList; //TODO - allow PIG to mess with this
+		std::list<std::shared_ptr<Components::BaseComponent>> componentList; //TODO - allow Components to mess with this
 		std::string name;
 	};
 }

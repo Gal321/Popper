@@ -2,6 +2,9 @@
 
 int main(int argc, char* args[])
 {
+	(argc);
+	(args);
+
 	App game;
 	int GlobalClock = 0;
 
