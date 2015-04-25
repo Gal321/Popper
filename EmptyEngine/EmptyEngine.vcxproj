@@ -73,7 +73,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>E:\dev\dep\SDL2-2.0.0\include;E:\dev\dep\SDL2_image-2.0.0\include;E:\dev\dep\SDL2_ttf-2.0.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\dev\dep\SDL2-2.0.3\include;E:\dev\dep\SDL2_image-2.0.0\include;E:\dev\dep\SDL2_ttf-2.0.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <TreatWarningAsError>true</TreatWarningAsError>
       <CompileAs>CompileAsCpp</CompileAs>
-      <AdditionalIncludeDirectories>E:\dev\dep\SDL2-2.0.0\include;E:\dev\dep\SDL2_image-2.0.0\include;E:\dev\dep\SDL2_ttf-2.0.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\dev\dep\SDL2-2.0.3\include;E:\dev\dep\SDL2_image-2.0.0\include;E:\dev\dep\SDL2_ttf-2.0.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
