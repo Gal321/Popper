@@ -1,6 +1,7 @@
 ﻿#include <SDL_syswm.h>
 #include <SDL_ttf.h>
 #include "EE_Engine.h"
+#include "EE_GraphicsComponent.h"
 
 EE::Engine::Engine(std::wstring title) :
 currentState(NOT_RUNNING),
@@ -130,7 +131,17 @@ void EE::Engine::Render()
 {
 	SDL_RenderClear(this->renderer);
 
+	for (auto & entity : this->entities)
+	{
+		entity->Render();
+	}
+
 	SDL_RenderPresent(this->renderer);
+}
+
+void EE::Engine::AddEntity(Entity * entity)
+{
+	this->entities.emplace_front(entity);
 }
 
 bool EE::Engine::CheckHotkey()

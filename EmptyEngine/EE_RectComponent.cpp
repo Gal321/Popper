@@ -1,6 +1,7 @@
-#include "EE_RectComponent.h"
 #include "EE_Exceptions.h"
 #include "EE_Entity.h"
+#include "EE_Engine.h"
+#include "EE_RectComponent.h"
 
 EE::Components::Rect::Rect(
 						Uint8 red,
@@ -13,6 +14,14 @@ EE::Components::Rect::Rect(
 	color({ red, green, blue, alpha }),
 	sdlSurface(nullptr)
 {
+}
+
+EE::Components::Rect::~Rect()
+{
+	if (this->sdlSurface)
+	{
+		SDL_FreeSurface(this->sdlSurface);
+	}
 }
 
 void EE::Components::Rect::setColor(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)
@@ -51,12 +60,4 @@ void EE::Components::Rect::Render()
 	SDL_SetRenderDrawColor(this->owner->owner->GetRenderer(), this->color.r, this->color.g, this->color.b, this->color.a);
 	SDL_RenderFillRect(this->owner->owner->GetRenderer(), &rect);
 	SDL_SetRenderDrawColor(this->owner->owner->GetRenderer(), temp.r, temp.g, temp.b, temp.a);
-}
-
-void EE::Components::Rect::Uninitialize()
-{
-	if (this->sdlSurface)
-	{
-		SDL_FreeSurface(this->sdlSurface);
-	}
 }

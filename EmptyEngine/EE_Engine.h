@@ -8,8 +8,12 @@
 
 #include "EE_Base.h"
 #include "EE_Input.h"
-#include <SDL.h>
+#include "EE_Entity.h"
 #include "EE_Exceptions.h"
+#include <SDL.h>
+#include <list>
+#include <memory>
+
 
 /******************************************************************
 *                                                                 *
@@ -47,6 +51,9 @@ namespace EE {
 
 		// Render a frame.
 		void Render();
+
+		// Add an entity
+		void AddEntity(Entity * entity);
 
 		// Gets the latest error message
 		std::string GetLastErrorMsg();
@@ -95,6 +102,7 @@ namespace EE {
 		SDL_Renderer *renderer;
 		bool isHotkeyPressed;
 		EngineState currentState;
+		std::list<std::shared_ptr<Entity>> entities;
 	};
 
 }

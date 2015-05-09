@@ -22,8 +22,10 @@ namespace EE
 
 			virtual void Bind(Entity * owner);
 			virtual void Update(int ticks) = 0;
+			virtual void Render() = 0;
 
 		protected:
+			virtual void Initialize() = 0;
 			EE::Entity * owner;
 		};
 	}

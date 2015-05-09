@@ -6,7 +6,6 @@
 *                                                                 *
 ******************************************************************/
 
-#include "EE_Engine.h"
 #include "EE_Base.h"
 #include "EE_BaseComponent.h"
 #include <string>
@@ -15,19 +14,22 @@
 
 namespace EE 
 {
+	class Engine;
+
 	class Entity
 	{
 	public:
 		Entity(Engine *owner, std::string name = "N/A");
 		virtual ~Entity();
 
-		void AddComponent(std::shared_ptr<Components::BaseComponent> component);
+		void AddComponent(Components::BaseComponent * component);
 		virtual void Update(int ticks);
-
+		void Render();
 		Engine *owner;
 
+		std::list<std::shared_ptr<Components::BaseComponent>> componentList;
+
 	protected:
-		std::list<std::shared_ptr<Components::BaseComponent>> componentList; //TODO - allow Components to mess with this
 		std::string name;
 	};
 }

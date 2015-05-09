@@ -7,24 +7,10 @@ EE::Components::Graphics::Graphics(Size size,
 	BaseComponent(),
 	size(size),
 	position(position),
-	isVisible(isVisible),
 	textureAlpha(alpha),
-	texture(nullptr)
+	texture(nullptr),
+	isVisible(isVisible)
 {
-}
-
-EE::Components::Graphics::~Graphics()
-{
-	this->Uninitialize();
-}
-
-void EE::Components::Graphics::Bind(Entity * owner)
-{
-	// binding to owner entity
-	this->BaseComponent::Bind(owner);
-
-	//running graphics initalization logic
-	this->Initialize();
 }
 
 void EE::Components::Graphics::SetTextureAlpha(Uint8 newAlpha)

@@ -22,17 +22,16 @@ namespace EE
 				Size size = Size::Get(),
 				Point position = Point::Get()
 				);
-			// using parent destructor
+			virtual ~Rect();
 
-			virtual void Initialize();
 			virtual void Update(int ticks);
 			virtual void Render();
-			virtual void Uninitialize();
 
 			void setColor(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha);
 			SDL_Color color;
 
 		protected:
+			virtual void Initialize();
 			SDL_Surface *sdlSurface;
 		};
 	}

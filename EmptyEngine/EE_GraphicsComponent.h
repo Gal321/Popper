@@ -22,23 +22,15 @@ namespace EE
 				     Point position = Point::Get(),
 					 Uint8 alpha = 0xFF,
 					 bool isVisible = true);
-			virtual ~Graphics();
-
-			virtual void Bind(Entity * owner);
-
-			virtual void Initialize() = 0;
-			virtual void Update(int ticks) = 0;
-			virtual void Render() = 0;
-			virtual void Uninitialize() = 0;
 
 			//handles alpha of texture (if there is one)
 			void SetTextureAlpha(Uint8 newAlpha);
 			Uint8 GetTextureAlpha();
 			
-			bool isVisible;
-			
 			Size size;
 			Point position;
+
+			bool isVisible;
 
 		protected:
 			Uint8 textureAlpha;
