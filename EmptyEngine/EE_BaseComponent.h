@@ -14,11 +14,11 @@ namespace EE
 
 	namespace Components
 	{
-		class BaseComponent
+		class Base
 		{
 		public:
-			BaseComponent();
-			virtual ~BaseComponent();
+			Base();
+			virtual ~Base();
 			virtual void Update(int ticks) = 0;
 
 		protected:

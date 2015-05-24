@@ -32,7 +32,7 @@
     <ClCompile Include="EE_Entity.cpp" />
     <ClCompile Include="EE_Exceptions.cpp" />
     <ClCompile Include="EE_GraphicEntities - DEP.cpp" />
-    <ClCompile Include="EE_GraphicsComponent.cpp" />
+    <ClCompile Include="EE_GraphicComponent.cpp" />
     <ClCompile Include="EE_RectComponent.cpp" />
     <ClCompile Include="EE_Strings.cpp" />
     <ClCompile Include="EE_Engine.cpp" />

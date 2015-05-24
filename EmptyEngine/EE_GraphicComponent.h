@@ -15,7 +15,7 @@ namespace EE
 {
 	namespace Components
 	{
-		class Graphic : public BaseComponent
+		class Graphic : public Base
 		{
 		public:
 			Graphic(Size size = Size::Get(),

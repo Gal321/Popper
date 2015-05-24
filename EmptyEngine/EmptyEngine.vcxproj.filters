@@ -110,9 +110,6 @@
     <ClCompile Include="EE_GraphicEntities - DEP.cpp">
       <Filter>Source Files\Graphics - DEP</Filter>
     </ClCompile>
-    <ClCompile Include="EE_GraphicsComponent.cpp">
-      <Filter>Source Files\Entities\Components</Filter>
-    </ClCompile>
     <ClCompile Include="EE_RectComponent.cpp">
       <Filter>Source Files\Entities\Components</Filter>
     </ClCompile>
@@ -124,6 +121,9 @@
     </ClCompile>
     <ClCompile Include="EE_Entity.cpp">
       <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EE_GraphicComponent.cpp">
+      <Filter>Source Files\Entities\Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
