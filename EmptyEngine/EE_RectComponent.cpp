@@ -10,7 +10,7 @@ EE::Components::Rect::Rect(
 						Uint8 alpha,
 						Size size,
 						Point position):
-	Graphics(size, position, alpha),
+	Graphic(size, position, alpha),
 	color({ red, green, blue, alpha }),
 	sdlSurface(nullptr)
 {

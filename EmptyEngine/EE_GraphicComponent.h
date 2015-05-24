@@ -15,15 +15,17 @@ namespace EE
 {
 	namespace Components
 	{
-		class Graphics : public BaseComponent
+		class Graphic : public BaseComponent
 		{
 		public:
-			Graphics(Size size = Size::Get(),
+			Graphic(Size size = Size::Get(),
 				     Point position = Point::Get(),
 					 Uint8 alpha = 0xFF,
 					 bool isVisible = true);
 
-			//handles alpha of texture (if there is one)
+			virtual void Render() = 0;
+
+			// Handles alpha of texture (if there is one)
 			void SetTextureAlpha(Uint8 newAlpha);
 			Uint8 GetTextureAlpha();
 			

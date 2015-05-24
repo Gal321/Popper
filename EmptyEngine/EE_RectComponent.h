@@ -5,13 +5,13 @@
 *                                                                 *
 ******************************************************************/
 
-#include "EE_GraphicsComponent.h"
+#include "EE_GraphicComponent.h"
 
 namespace EE
 {
 	namespace Components
 	{
-		class Rect : public Graphics
+		class Rect : public Graphic
 		{
 		public:
 			Rect(

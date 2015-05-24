@@ -19,7 +19,7 @@
     <ClInclude Include="EE_Entity.h" />
     <ClInclude Include="EE_Exceptions.h" />
     <ClInclude Include="EE_GraphicEntities - DEP.h" />
-    <ClInclude Include="EE_GraphicsComponent.h" />
+    <ClInclude Include="EE_GraphicComponent.h" />
     <ClInclude Include="EE_Input.h" />
     <ClInclude Include="EE_Engine.h" />
     <ClInclude Include="EE_RectComponent.h" />

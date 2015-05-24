@@ -1,6 +1,6 @@
-#include "EE_GraphicsComponent.h"
+#include "EE_GraphicComponent.h"
 
-EE::Components::Graphics::Graphics(Size size,
+EE::Components::Graphic::Graphic(Size size,
 								   Point position,
 								   Uint8 alpha,
 								   bool isVisible):
@@ -13,7 +13,7 @@ EE::Components::Graphics::Graphics(Size size,
 {
 }
 
-void EE::Components::Graphics::SetTextureAlpha(Uint8 newAlpha)
+void EE::Components::Graphic::SetTextureAlpha(Uint8 newAlpha)
 {
 	if (this->texture)
 	{
@@ -22,7 +22,7 @@ void EE::Components::Graphics::SetTextureAlpha(Uint8 newAlpha)
 	}
 }
 
-Uint8 EE::Components::Graphics::GetTextureAlpha()
+Uint8 EE::Components::Graphic::GetTextureAlpha()
 {
 	return this->textureAlpha;
 }

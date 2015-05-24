@@ -75,9 +75,6 @@
     <ClInclude Include="EE_Entity.h">
       <Filter>Header Files\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="EE_GraphicsComponent.h">
-      <Filter>Header Files\Entities\Components</Filter>
-    </ClInclude>
     <ClInclude Include="EE_RectComponent.h">
       <Filter>Header Files\Entities\Components</Filter>
     </ClInclude>
@@ -91,6 +88,9 @@
       <Filter>Header Files\Entities</Filter>
     </ClInclude>
     <ClInclude Include="EE_BaseComponent.h">
+      <Filter>Header Files\Entities\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EE_GraphicComponent.h">
       <Filter>Header Files\Entities\Components</Filter>
     </ClInclude>
   </ItemGroup>
