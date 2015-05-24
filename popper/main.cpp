@@ -9,6 +9,9 @@ int main(int argc, char* args[])
 	int GlobalClock = 0;
 
 	game.GetEngine().Initialize();
+	EE::Entity  * rect = new EE::Entity(&game.GetEngine());
+	rect->AddComponent(new EE::Components::Rect(100, 255, 255, 255));
+	game.GetEngine().AddEntity(rect);
 	while (game.GetEngine().GetState() != EE::Engine::QUIT)
 	{
 		game.Update(GlobalClock);
